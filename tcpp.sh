@@ -26,12 +26,12 @@ vm.min_free_kbytes = 204800
 # ---------------------------------------------------
 # 网络设备队列与缓冲
 net.core.default_qdisc = fq
-net.core.netdev_max_backlog = 5000
+net.core.netdev_max_backlog = 2000
 net.core.rmem_max = 134217728
 net.core.wmem_max = 67108864
 net.core.rmem_default = 1048576
 net.core.wmem_default = 1048576
-net.core.somaxconn = 65535
+net.core.somaxconn = 4096
 net.core.optmem_max = 65536
 
 # TCP连接优化
@@ -49,22 +49,22 @@ net.ipv4.tcp_abort_on_overflow = 0
 net.ipv4.tcp_fastopen = 3
 net.ipv4.tcp_timestamps = 1
 net.ipv4.tcp_window_scaling = 1
-net.ipv4.tcp_adv_win_scale = -2
-net.ipv4.tcp_notsent_lowat = 131072
+net.ipv4.tcp_adv_win_scale = 1
+net.ipv4.tcp_notsent_lowat = 16384
 net.ipv4.tcp_congestion_control = bbr
 net.ipv4.tcp_bbr_plb_enabled = 1
 net.ipv4.tcp_bbr_pacing_gain = 1.5
 
 # TCP缓冲区调整
 net.ipv4.tcp_rmem = 4096 262144 67108864
-net.ipv4.tcp_wmem = 4096 16384 67108864
+net.ipv4.tcp_wmem = 4096 65536 67108864
 
 # 丢包恢复与MTU优化
 net.ipv4.tcp_sack = 1
 net.ipv4.tcp_dsack = 1
 net.ipv4.tcp_fack = 1
 net.ipv4.tcp_mtu_probing = 1
-net.ipv4.tcp_ecn = 1
+net.ipv4.tcp_ecn = 0
 net.ipv4.tcp_slow_start_after_idle = 0
 
 # ---------------------------------------------------
