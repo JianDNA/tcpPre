@@ -52,8 +52,6 @@ net.ipv4.tcp_window_scaling = 1
 net.ipv4.tcp_adv_win_scale = 1
 net.ipv4.tcp_notsent_lowat = 16384
 net.ipv4.tcp_congestion_control = bbr
-net.ipv4.tcp_bbr_plb_enabled = 1
-net.ipv4.tcp_bbr_pacing_gain = 1.5
 
 # TCP缓冲区调整
 net.ipv4.tcp_rmem = 4096 262144 67108864
